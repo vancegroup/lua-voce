@@ -17,10 +17,9 @@
 //          http://www.boost.org/LICENSE_1_0.txt)
 
 
-///@todo change GUID
 #pragma once
-#ifndef INCLUDED_ModuleEntryPoint_h_GUID_8690c734_bdd8_45f8_8401_87c948f4090c
-#define INCLUDED_ModuleEntryPoint_h_GUID_8690c734_bdd8_45f8_8401_87c948f4090c
+#ifndef INCLUDED_ModuleEntryPoint_h_GUID_e80703e0_e3bd_43ed_8c93_6d56fc795ad0
+#define INCLUDED_ModuleEntryPoint_h_GUID_e80703e0_e3bd_43ed_8c93_6d56fc795ad0
 
 // Internal Includes
 #include "LuaInterface.h"
@@ -38,4 +37,4 @@ int LUAVOCE_API luaopen_luavoce(lua_State *L);
 
 LUAVOCE_END_LUA_INTERFACE
 
-#endif // INCLUDED_ModuleEntryPoint_h_GUID_8690c734_bdd8_45f8_8401_87c948f4090c
+#endif // INCLUDED_ModuleEntryPoint_h_GUID_e80703e0_e3bd_43ed_8c93_6d56fc795ad0

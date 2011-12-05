@@ -17,10 +17,9 @@
 //    (See accompanying file LICENSE_1_0.txt or copy at
 //          http://www.boost.org/LICENSE_1_0.txt)
 
-///@todo: change GUID
 #pragma once
-#ifndef INCLUDED_LuaInclude_h_GUID_a526c846_236b_4215_9036_65b3e519f08e
-#define INCLUDED_LuaInclude_h_GUID_a526c846_236b_4215_9036_65b3e519f08e
+#ifndef INCLUDED_LuaInclude_h_GUID_190c847f_36b0_4383_b73a_a1f2abc9e46e
+#define INCLUDED_LuaInclude_h_GUID_190c847f_36b0_4383_b73a_a1f2abc9e46e
 
 #include "LuaInterface.h"
 
@@ -28,4 +27,4 @@ LUAVOCE_BEGIN_LUA_INTERFACE
 #include <lua.h>
 LUAVOCE_END_LUA_INTERFACE
 
-#endif // INCLUDED_LuaInclude_h_GUID_a526c846_236b_4215_9036_65b3e519f08e
+#endif // INCLUDED_LuaInclude_h_GUID_190c847f_36b0_4383_b73a_a1f2abc9e46e

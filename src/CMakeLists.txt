@@ -25,23 +25,23 @@ install(TARGETS luavoce
 
 set(LUAVOCE_INSTALL_NAME "${CMAKE_INSTALL_PREFIX}/bin/luavoce${CMAKE_SHARED_MODULE_SUFFIX}")
 
-# set(APP)
-# set(PLUGINS)
-# set(LIBRARY_DIRS)
+set(APP)
+set(PLUGINS)
+set(LIBRARY_DIRS)
 
-# if(LUA_COMMAND)
-	# install(PROGRAMS "${LUA_COMMAND}" DESTINATION bin)
-	# get_filename_component(LUA_COMMAND_FILENAME "${LUA_COMMAND}" NAME)
-	# list(APPEND PLUGINS "${LUAHAPI_INSTALL_NAME}")
-	# set(APP "${CMAKE_INSTALL_PREFIX}/bin/${LUA_COMMAND_FILENAME}")
-# else()
-	# set(APP "${LUAHAPI_INSTALL_NAME}")
-# endif()
+if(LUA_COMMAND)
+	install(PROGRAMS "${LUA_COMMAND}" DESTINATION bin)
+	get_filename_component(LUA_COMMAND_FILENAME "${LUA_COMMAND}" NAME)
+	set(APP "${CMAKE_INSTALL_PREFIX}/bin/${LUA_COMMAND_FILENAME}")
+	list(APPEND PLUGINS "${LUAHAPI_INSTALL_NAME}")
+else()
+	set(APP "${LUAHAPI_INSTALL_NAME}")
+endif()
 
-# get_filename_component(LUA_LIBDIR "${LUA_LIBRARY}" PATH)
-# list(APPEND LIBRARY_DIRS "${LUA_LIBDIR}")
+get_filename_component(LUA_LIBDIR "${LUA_LIBRARY}" PATH)
+list(APPEND LIBRARY_DIRS "${LUA_LIBDIR}")
 
-# install(CODE "
-  # include(BundleUtilities)
-  # fixup_bundle(\"${APP}\" \"${PLUGINS}\" \"${LIBRARY_DIRS}\")
-  # ")
+install(CODE "
+  include(BundleUtilities)
+  fixup_bundle(\"${APP}\" \"${PLUGINS}\" \"${LIBRARY_DIRS}\")
+  ")

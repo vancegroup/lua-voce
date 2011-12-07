@@ -20,6 +20,7 @@
 
 // Internal Includes
 #include "ModuleEntryPoint.h"
+#include "voce.h"
 
 // Library/third-party includes
 #include <luabind/luabind.hpp>
@@ -32,7 +33,24 @@ int luaopen_luavoce(lua_State *L) {
 	open(L);
 	module(L, "voce")
 	[
-	
+	    def("init", &voce::init)
+	    ,
+	    def("destroy", &voce::destroy)
+	    ,
+	    def("synthesize", &voce::synthesize)
+	    ,
+	    def("isSynthesizing", &voce::isSynthesizing)
+	    ,
+	    def("stopSynthesizing", &voce::stopSynthesizing)
+	    ,
+	    def("getRecognizerQueueSize", &voce::getRecognizerQueueSize)
+	    ,
+	    def("popRecognizedString", &voce::popRecognizedString)
+	    ,
+	    def("setRecognizerEnabled", &voce::setRecognizerEnabled)
+	    ,
+	    def("isRecognizerEnabled", &voce::isRecognizerEnabled)
+	    ,
 	    scope() // trailing empty scope so we can put commas after each binding call
 	];
 	return 0;

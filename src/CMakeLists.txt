@@ -10,7 +10,7 @@ set(SOURCES
 
 add_library(luavoce MODULE ${SOURCES})
 set_property(TARGET luavoce PROPERTY PREFIX "")
-target_link_libraries(luavoce ${LUABIND_LIBRARIES} ${JNI_LIBRARIES})
+target_link_libraries(luavoce ${LUABIND_LIBRARIES} ${JAVA_JVM_LIBRARY})
 
 #if(BUILD_TESTING)
 	# if(NOT LUA_COMMAND)

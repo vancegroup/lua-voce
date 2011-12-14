@@ -1,0 +1,242 @@
+
+lua-voce
+========
+
+Lua bindings for the Voce voice-recognition wrapper/library
+
+[lua-voce homepage on GitHub][home]
+
+Maintained by the [Vance Research Team][jmvance] at Iowa State
+University's Virtual Reality Applications Center. Original author: [Ryan
+Pavlik][rp], <rpavlik@iastate.edu> <abiryan@ryand.net>
+
+[home]:https://github.com/vance-group/lua-voce
+[jmvance]:http://www.vrac.iastate.edu/~jmvance/ "Judy M. Vance, Ph. D."
+[rp]:http://academic.cleardefinition.com/ "Ryan Pavlik"
+
+Compatibility
+-------------
+
+
+Dependencies
+------------
+- Git, for downloading the source code and its dependencies.
+
+- CMake 2.8.4 or newer, for building the source only. (not needed once
+compiled and installed)
+
+- Lua 5.1 (on Windows, the Lua Binaries project offers libraries and
+executables for a variety of compilers)
+
+- Luabind - [Ryan Pavlik's fork][luabind] with a CMake-based build and
+other improvements is recommended.
+
+[luabind]:https://github.com/rpavlik/luabind "Luabind, with Ryan Pavlik's modifications."
+
+Getting the Source
+------------------
+###The quick version:
+    git clone https://github.com/vance-group/lua-voce.git
+    cd lua-voce
+    git submodule update --init
+
+###A bit of explanation
+The git repository hosted at the [homepage][home] contains the source
+for the bindings, and in "git submodules" the source of tested versions
+of Voce. If you forget to
+run the `git submodule update --init` command, these bundled
+dependencies won't be downloaded, and you'll get an error message when
+running CMake as a reminder.
+
+Building
+--------
+Just run CMake, being sure to set a build directory that is different
+from your source directory. Tell it where to find any dependencies it
+can't locate. Then, build the generated project/makefiles in the binary
+directory.
+
+The Voce libraries are configured and built in the same solution 
+as the binding itself automatically.
+
+
+Acknowledgement
+---------------
+If you find this useful, we would appreciate hearing from you. If you
+use this for academic work, we would also appreciate a copy of the
+publication and a citation: this helps make a case for our work. You may
+contact the main developer, Ryan Pavlik (Iowa State University), by
+email at <rpavlik@iastate.edu> or <abiryan@ryand.net>.
+
+Paper materials and copies of publications may be mailed to:
+
+> Ryan Pavlik
+>
+> Virtual Reality Applications Center
+>
+> 1620 Howe Hall
+>
+> Ames, Iowa 50011-2274
+>
+> USA
+
+Licenses
+--------
+The full package is free and open-source software, under a variety of licenses.
+
+### lua-voce - BSL 1.0
+The lua-voce binding files themselves (the files in `src/`) are subject
+to the following license:
+
+> Copyright Iowa State University 2011.
+>
+> Distributed under the Boost Software License, Version 1.0.
+>
+> (See accompanying file `LICENSE_1_0.txt` or copy at
+> <http://www.boost.org/LICENSE_1_0.txt>)
+
+### Voce License - BSD or LGPL
+
+> This library is free software; you can redistribute it and/or
+> modify it under the terms of EITHER:
+>   (1) The GNU Lesser General Public License as published by the Free
+>       Software Foundation; either version 2.1 of the License, or (at
+>       your option) any later version. The text of the GNU Lesser
+>       General Public License is included with this library in the
+>       file license-LGPL.txt.
+>   (2) The BSD-style license that is included with this library in
+>       the file license-BSD.txt.
+> 
+> This library is distributed in the hope that it will be useful,
+> but WITHOUT ANY WARRANTY; without even the implied warranty of
+> MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the files
+> license-LGPL.txt and license-BSD.txt for more details.
+
+
+Voce includes a build of "freetts" <http://freetts.sourceforge.net>
+which is under the following license:
+
+> Portions Copyright 2001-2004 Sun Microsystems, Inc.  
+> Portions Copyright 1999-2001 Language Technologies Institute,
+> Carnegie Mellon University.  
+> All Rights Reserved.  Use is subject to license terms.
+> 
+> Permission is hereby granted, free of charge, to use and distribute
+> this software and its documentation without restriction, including
+> without limitation the rights to use, copy, modify, merge, publish,
+> distribute, sublicense, and/or sell copies of this work, and to
+> permit persons to whom this work is furnished to do so, subject to
+> the following conditions:
+> 
+>  1. The code must retain the above copyright notice, this list of
+>     conditions and the following disclaimer.
+>  2. Any modifications must be clearly marked as such.
+>  3. Original authors' names are not deleted.
+>  4. The authors' names are not used to endorse or promote products
+>     derived from this software without specific prior written
+>     permission.
+> 
+> SUN MICROSYSTEMS, INC., CARNEGIE MELLON UNIVERSITY AND THE
+> CONTRIBUTORS TO THIS WORK DISCLAIM ALL WARRANTIES WITH REGARD TO THIS
+> SOFTWARE, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND
+> FITNESS, IN NO EVENT SHALL SUN MICROSYSTEMS, INC., CARNEGIE MELLON
+> UNIVERSITY NOR THE CONTRIBUTORS BE LIABLE FOR ANY SPECIAL, INDIRECT OR
+> CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF
+> USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+> OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+> PERFORMANCE OF THIS SOFTWARE.
+
+Voce also includes a build of "Sphinx-4" <http://cmusphinx.sourceforge.net/sphinx4/>
+which is available under the following license:
+ 
+> Copyright 1999-2008 Carnegie Mellon University.  
+> Portions Copyright 2002-2008 Sun Microsystems, Inc.  
+> Portions Copyright 2002-2008 Mitsubishi Electric Research Laboratories.
+> All Rights Reserved.  Use is subject to license terms.
+> 
+> Redistribution and use in source and binary forms, with or without
+> modification, are permitted provided that the following conditions
+> are met:
+> 
+> 1. Redistributions of source code must retain the above copyright
+>    notice, this list of conditions and the following disclaimer. 
+> 
+> 2. Redistributions in binary form must reproduce the above copyright
+>    notice, this list of conditions and the following disclaimer in
+>    the documentation and/or other materials provided with the
+>    distribution.
+> 
+> 3. Original authors' names are not deleted.
+> 
+> 4. The authors' names are not used to endorse or promote products
+>    derived from this software without specific prior written
+>    permission.
+> 
+> This work was supported in part by funding from the Defense Advanced 
+> Research Projects Agency and the National Science Foundation of the 
+> United States of America, the CMU Sphinx Speech Consortium, and
+> Sun Microsystems, Inc.
+> 
+> CARNEGIE MELLON UNIVERSITY, SUN MICROSYSTEMS, INC., MITSUBISHI
+> ELECTRONIC RESEARCH LABORATORIES AND THE CONTRIBUTORS TO THIS WORK
+> DISCLAIM ALL WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING ALL
+> IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL
+> CARNEGIE MELLON UNIVERSITY, SUN MICROSYSTEMS, INC., MITSUBISHI
+> ELECTRONIC RESEARCH LABORATORIES NOR THE CONTRIBUTORS BE LIABLE FOR
+> ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+> WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+> ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT
+> OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+
+
+### Luabind (dependency) - MIT License
+Luabind is required to build lua-voce, and is subject to the following license:
+
+> Copyright &copy; 2003-2011 Daniel Wallin and Arvid Norberg
+>
+> Copyright &copy; 2008-2011 Contributers
+>
+> Permission is hereby granted, free of charge, to any person obtaining a
+> copy of this software and associated documentation files (the "Software"),
+> to deal in the Software without restriction, including without limitation
+> the rights to use, copy, modify, merge, publish, distribute, sublicense,
+> and/or sell copies of the Software, and to permit persons to whom the
+> Software is furnished to do so, subject to the following conditions:
+>
+> The above copyright notice and this permission notice shall be included
+> in all copies or substantial portions of the Software.
+>
+> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF
+> ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+> TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+> PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT
+> SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR
+> ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+> ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+> OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+> OR OTHER DEALINGS IN THE SOFTWARE.
+
+### Lua 5.1 (dependency) - MIT License
+Lua 5.1 is required to build Luabind and lua-hapi, and is subject to the
+following license:
+
+> Copyright &copy; 1994–2011 Lua.org, PUC-Rio.
+>
+> Permission is hereby granted, free of charge, to any person obtaining
+> a copy of this software and associated documentation files (the
+> "Software"), to deal in the Software without restriction,including
+> without limitation the rights to use, copy, modify, merge, publish,
+> distribute, sublicense, and/or sell copies of the Software, and to
+> permit persons to whom the Software is furnished to do so, subject to
+> the following conditions:
+>
+> The above copyright notice and this permission notice shall be included
+> in all copies or substantial portions of the Software.
+>
+> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+> OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+> MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+> IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+> CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+> TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+> SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

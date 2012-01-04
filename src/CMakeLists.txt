@@ -21,6 +21,9 @@ add_library(luavoce MODULE ${SOURCES})
 set_property(TARGET luavoce PROPERTY PREFIX "")
 target_link_libraries(luavoce ${LUABIND_LIBRARIES} ${JNI_LIBRARIES} ${JAVA_AWT_LIBRARY})
 
+# Lua files target
+add_subdirectory(lua)
+add_subdirectory(util)
 
 #if(BUILD_TESTING)
 	# if(NOT LUA_COMMAND)

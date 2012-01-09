@@ -7,19 +7,10 @@ set(SOURCES
 	ModuleEntryPoint.cpp
 	ModuleEntryPoint.h)
 
-#http://www.cmake.org/pipermail/cmake/2004-March/004844.html
-#This is kind of a hack to get around having to "export LD_LIBRARY_PATH"
-get_filename_component(JAVA_LIB_DIR ${JAVA_AWT_LIBRARY} PATH)
-if(EXISTS ${JAVA_LIB_DIR}/xawt)
-	link_directories(${JAVA_LIB_DIR}/xawt)
-	message(STATUS "Linking against xawt")
-	message(STATUS ${JAVA_LIB_DIR}/xawt)
-endif()
-
 
 add_library(luavoce MODULE ${SOURCES})
 set_property(TARGET luavoce PROPERTY PREFIX "")
-target_link_libraries(luavoce ${LUABIND_LIBRARIES} ${JNI_LIBRARIES} ${JAVA_AWT_LIBRARY})
+target_link_libraries(luavoce ${LUABIND_LIBRARIES} ${JAVA_JVM_LIBRARY})
 
 # Lua files target
 add_subdirectory(lua)

@@ -19,7 +19,7 @@ endif()
 
 add_library(luavoce MODULE ${SOURCES})
 set_property(TARGET luavoce PROPERTY PREFIX "")
-target_link_libraries(luavoce ${LUABIND_LIBRARIES} ${JNI_LIBRARIES} ${JAVA_AWT_LIBRARY})
+target_link_libraries(luavoce ${LUABIND_LIBRARIES} ${JAVA_JVM_LIBRARY})
 
 
 #if(BUILD_TESTING)

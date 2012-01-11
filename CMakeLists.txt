@@ -9,6 +9,7 @@ set(CPACK_PACKAGE_CONTACT "Ryan Pavlik <rpavlik@iastate.edu>")
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
+#Boost needed for luabind
 find_package(Boost REQUIRED)
 #http://www.cmake.org/cmake/help/cmake-2-8-docs.html#module:FindJNI
 find_package(JNI REQUIRED)

@@ -20,7 +20,7 @@
 
 // Internal Includes
 #include "ModuleEntryPoint.h"
-#include "voce.h"
+#include <voce/voce.h>
 
 // Library/third-party includes
 #include <luabind/luabind.hpp>

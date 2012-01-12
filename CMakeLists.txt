@@ -35,3 +35,8 @@ endif()
 
 #add_subdirectory(submodules)
 add_subdirectory(src)
+
+#check for voce submodule
+if(NOT EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/submodules/voce/CMakeLists.txt")
+	message(FATAL_ERROR "lua-voce/submodules/voce not found - please run git submodule update --init in your source tree!")
+endif()

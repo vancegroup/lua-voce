@@ -1,7 +1,8 @@
 lua-voce
 ========
 
-Lua bindings for the Voce speech interaction wrapper/library
+Lua bindings for the [Voce speech interaction wrapper/library][voce]
+(friendly fork with updates to Voce [maintained here][ghvoce])
 
 [lua-voce homepage on GitHub][home]
 
@@ -9,6 +10,8 @@ Maintained by the [Vance Research Team][jmvance] at Iowa State
 University's Virtual Reality Applications Center. Original author: [Ryan
 Pavlik][rp], <rpavlik@iastate.edu> <abiryan@ryand.net>
 
+[voce]:http://voce.sourceforge.net/
+[ghvoce]:https://github.com/vance-group/voce
 [home]:https://github.com/vance-group/lua-voce
 [jmvance]:http://www.vrac.iastate.edu/~jmvance/ "Judy M. Vance, Ph. D."
 [rp]:http://academic.cleardefinition.com/ "Ryan Pavlik"
